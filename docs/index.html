@@ -4,178 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/commons.css">
-    <script type="module" src="script/server.js" defer></script>
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="script/index.js" defer></script>
     <title>Crowe - Login/Signup</title>
 </head>
 <body>
     <div id="container">
-        <div id="half-feed">
-            <div style="
-                display: flex;
-                background-color: rgb(116, 116, 116);
-                width: 100%;
-                border-radius: 50px;
-                flex-grow: 11;
-                justify-content: center;
-                align-items: center;
-                font-size: 50px;
-                font-weight: bolder;
-            ">No Content available</div>
-            <input type="text" placeholder="Search" style="
-                width: 100%;
-                flex-grow: 1;
-                margin: 20px 20px 0 20px;
-                border-radius: 50px 50px 0 0;
-                font-size: large;
-            ">
+        <div id="feed-side">
+            <div id="half-feed">No Content available</div>
+            <input id="search-bar" type="text" placeholder="Search Catagory/ Title">
         </div>
-        
-
-
 
         <div id="resizer"></div>
-        <div id="login-panel" style="
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            padding: 10px;
-            gap: 10px;
-        ">
-            <div style="
-                background-color: black;
-                grid-column: span 1;
-            "></div>
-            <div style="
-                background-color: pink;
-                grid-column: span 2;
-            "></div>
-            <div style="
-                background-color: yellow;
-                grid-column: span 3;
-                border-radius: 50px;
-            ">
-                <form action="">
-                    <input required id="email" type="email" placeholder="Username" style="border-radius: 50px 50px 0 0;"><br>
-                    <input required id="password" type="password" placeholder="Password"><br>
-                    <div style="flex-grow: 2;">
-                        <button>Login</button>
+
+        <div id="login-side">
+            <div id="login-side-reserved"></div>
+            <div id="branding"></div>
+            <div id="login-form">
+                <form>
+                    <input id="email" type="email" placeholder="Email" required>
+                    <input id="password" type="password" placeholder="Password" required>
+                    <div id="button-group">
+                        <button id="login-btn">Login</button>
                         <button id="signup-btn">Sign up</button>
                     </div>
-                    <div style="flex-grow: 6; border-radius: 0 0 50px 50px;"></div>
+                    <div id="login-form-reserved"></div>
                 </form>
             </div>
         </div>
     </div>
 </body>
 </html>
-<style>
-form{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    height: 100%;
-    gap: 5px;
-}
-input{
-    flex-grow: 4;
-    font-size: larger;
-}
-button{
-    width: 48%;
-    height: 100%;
-    font-size: larger;
-    border-radius: 20px;
-}
-
-#half-feed{
-    background-color: green;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 10px;
-    flex-direction: column;
-    width: 60%;
-}
-#login-panel{
-    background-color: red;
-    width: 40%;
-}
-
-#resizer {
-    width: 5px;
-    cursor: ew-resize;
-    background: #ccc;
-    
-}
-
-#resizer:hover {
-    background: #999;
-}
-
-
-
-
-</style>
-<script>
-const resizer = document.getElementById("resizer");
-const feed = document.getElementById("half-feed");
-const login = document.getElementById("login-panel");
-
-resizer.addEventListener("mousedown", (event) => {
-    
-    document.addEventListener("mousemove", onMouseMove);
-    document.addEventListener("mouseup", () => {
-        document.removeEventListener("mousemove", onMouseMove);
-    }, { once: true });
-})
-
-function onMouseMove(event) {
-    let mouseX = event.clientX // Get mouse X-axis position
-    let viewportX = document.body.clientWidth // Get total viewport width
-
-    if (mouseX > viewportX-200 || mouseX < 200) return
-    
-    // Apply width
-    feed.style.width = mouseX - 100 + "px"
-    login.style.width = viewportX - mouseX - 20 + "px"
-}
-
-async function signUp() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-    try {
-        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-        console.log("User created");
-        window.location.href = "html/home.html";
-    } catch (error) {
-        alert(error.message);
-    }
-}
-
-document.getElementById("signup-btn").addEventListener("click", (e) => {
-    e.preventDefault();
-    signUp();
-});
-
-async function login() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-    try {
-        const userCredential = await signInWithEmailAndPassword(auth, email, password);
-        alert("Login successful!");
-        window.location.href = "dashboard.html"; // Redirect after login
-    } catch (error) {
-        alert(error.message);
-    }
-}
-
-document.getElementById("login-btn").addEventListener("click", (e) => {
-    e.preventDefault();
-    login();
-});
-
-</script>

@@ -19,6 +19,9 @@ const email = document.getElementById("email")
 const password = document.getElementById("password")
 const form = document.getElementsByName("form")[0]
 
+// On Load //////////////////////////////////
+document.querySelector("video").playbackRate = 0.7;
+
 // Event Listeners //////////////////////////
 
 /**

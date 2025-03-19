@@ -4,27 +4,61 @@
     height: 100%;
     width: 100%;
 }
+video{
+    background-color: lightgray;
+    filter: blur(7px) opacity(85%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+}
+
 #feed-side{
-    background-color: aqua;
     flex-grow: 6;
     display: flex;
     flex-direction: column;
     padding: 30px 3% 20px 3%;
     gap: 10px;
+    transition: filter 0.2s ease, background-color 0.2s ease;
+    background-color: rgba(173, 173, 173, 0.8);
+    filter: blur(1.7px);
 }
+#feed-side:hover{
+    transition: filter 0.2s ease, background-color 0.2s ease;
+    background-color: rgba(173, 173, 173, 0);
+    filter: blur(0px);
+}
+
 #resizer{
-    background-color: gray;
-    width: 5px;
+    background-color: rgba(85, 85, 85, 0.65);
+    width: 10px;
+    transition: all 0.15s ease;
 }
+#resizer:hover{
+    background-color: rgba(37, 37, 37, 0.9);
+    cursor: ew-resize;
+    width: 30px;
+    transition: all 0.15s ease;
+}
+
 #login-side{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr minmax(0, 50vh);
     grid-template-rows: 1fr 1fr;
-    background-color: brown;
     flex-grow: 2;
     padding: 20px 2% 10px 2%;
     gap: 10px;
+    transition: filter 0.2s ease, background-color 0.2s ease;
+    background-color: rgba(173, 173, 173, 0.8);
+    filter: blur(1.7px);
 }
+#login-side:hover{
+    transition: filter 0.2s ease, background-color 0.2s ease;
+    background-color: rgba(173, 173, 173, 0);
+    filter: blur(0px);
+}
+
 
 /* Left-side / half-feed-side */
 #half-feed{
@@ -38,23 +72,38 @@
     font-weight: 900;
 }
 #search-bar{
+    box-sizing: border-box;
     flex-grow: 1;
     border-radius: 30px;
     font-size: larger;
     font-weight: 900;
     width: 100%;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.8);
+    transition: all 0.2s ease;
 }
+#search-bar:focus{
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding-left: 12px;
+    transition: all 0.2s ease;
+}
+#search-bar:hover{
+    padding-left: 12px;
+    transition: all 0.2s ease;
+}
+
 
 /* Right-side / login-side */
 #login-side-reserved-space{
     grid-column: span 1;
     grid-row: span 1;
-    background-color: black;
 }
 #branding{
-    grid-column: span 2;
+    grid-column: span 1;
     grid-row: span 1;
     background-color: aqua;
+    aspect-ratio: 1 / 1;
+    max-height: min(50vh);
+    align-self: end;
 }
 form{
     display: flex;
@@ -67,13 +116,47 @@ form{
     padding: 20px 0 10px 0;
     gap: 7px;
 }
+
 input{
+    box-sizing: border-box;
     width: 90%;
     border-radius: 20px;
     flex-grow: 3;
     font-size: 24px;
     font-weight: 500;
+    transition: all 0.2s ease;
 }
+
+form > input:hover, form > input:focus{
+    padding-left: 12px;
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+}
+/* Email */
+form > input[type="email"]:valid {
+    padding-left: 20px;
+    box-shadow: inset 0px 0px 18px rgba(14, 202, 23, 0.6);
+    transition: all 0.2s ease;
+}
+form > input[type="email"]:invalid:not(:focus):not(:placeholder-shown){
+    padding-left: 12px;
+    box-shadow: inset 0px 0px 24px rgba(202, 36, 14, 0.7);
+    transition: all 0.2s ease;
+}
+/* Password */
+form > input[type="password"][minlength="6"]:valid {
+    padding-left: 20px;
+    box-shadow: inset 0px 0px 18px rgba(14, 202, 23, 0.6);
+    transition: all 0.2s ease;
+}
+
+form > input[type="password"][minlength="6"]:invalid:not(:focus):not(:placeholder-shown){
+    padding-left: 12px;
+    box-shadow: inset 0px 0px 18px rgba(202, 36, 14, 0.7);
+    transition: all 0.2s ease;
+}
+/* Form Input END*/
+
 #form-btn-group{
     flex-grow: 2;
     width: 100%;
@@ -88,4 +171,18 @@ button{
     font-weight: 900;
     font-size: 24px;
     border-radius: 20px;
+}
+
+
+/* Transitions */ /* not in use atm, might clear*/ 
+.background.fade-in{
+    animation: fade-in .5s;
+    background-color: rgba(173, 173, 173, 0);
+    filter: blur(0px);
+}
+
+.background.fade-out{
+    animation: fade-out .5s;
+    background-color: rgba(173, 173, 173, 0.6);
+    filter: blur(10px);
 }

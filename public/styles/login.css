@@ -6,7 +6,7 @@
 }
 video{
     background-color: lightgray;
-    filter: blur(7px) opacity(85%);
+    filter: blur(4.5px) opacity(90%);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -20,18 +20,18 @@ video{
     flex-direction: column;
     padding: 30px 3% 20px 3%;
     gap: 10px;
-    transition: filter 0.2s ease, background-color 0.2s ease;
-    background-color: rgba(173, 173, 173, 0.8);
-    filter: blur(1.7px);
+    transition: filter 0.25s ease, background-color 0.25s ease;
+    background-color: rgba(248, 237, 227, 0.4);
+    filter: blur(1.5px);
 }
 #feed-side:hover{
-    transition: filter 0.2s ease, background-color 0.2s ease;
-    background-color: rgba(173, 173, 173, 0);
+    transition: filter 0.25s ease, background-color 0.25s ease;
+    background-color: rgba(248, 237, 227, 0);
     filter: blur(0px);
 }
 
 #resizer{
-    background-color: rgba(85, 85, 85, 0.65);
+    background-color: rgba(85, 85, 85, 0.55);
     width: 10px;
     transition: all 0.15s ease;
 }
@@ -39,7 +39,7 @@ video{
     background-color: rgba(37, 37, 37, 0.9);
     cursor: ew-resize;
     width: 30px;
-    transition: all 0.15s ease;
+    transition: all 0.2s ease;
 }
 
 #login-side{
@@ -49,13 +49,13 @@ video{
     flex-grow: 2;
     padding: 20px 2% 10px 2%;
     gap: 10px;
-    transition: filter 0.2s ease, background-color 0.2s ease;
-    background-color: rgba(173, 173, 173, 0.8);
-    filter: blur(1.7px);
+    transition: filter 0.25s ease, background-color 0.25s ease;
+    background-color: rgba(248, 237, 227, 0.4);
+    filter: blur(1.5px);
 }
 #login-side:hover{
-    transition: filter 0.2s ease, background-color 0.2s ease;
-    background-color: rgba(173, 173, 173, 0);
+    transition: filter 0.25s ease, background-color 0.25s ease;
+    background-color: rgba(248, 237, 227, 0);
     filter: blur(0px);
 }
 
@@ -64,7 +64,7 @@ video{
 #half-feed{
     display: flex;
     flex-grow: 14;
-    background-color: beige;
+    background-color: rgb(223 211 195);
     border-radius: 40px;
     justify-content: center;
     align-items: center;
@@ -110,11 +110,13 @@ form{
     flex-direction: column;
     grid-column: span 3;
     grid-row: span 1;
-    background-color: gray;
+    background-color: rgb(223 211 195);
     border-radius: 30px;
     align-items: center;
     padding: 20px 0 10px 0;
     gap: 7px;
+box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4);
+opacity: .96;
 }
 
 input{
@@ -135,24 +137,24 @@ form > input:hover, form > input:focus{
 /* Email */
 form > input[type="email"]:valid {
     padding-left: 20px;
-    box-shadow: inset 0px 0px 18px rgba(14, 202, 23, 0.6);
+    box-shadow: inset 0px 0px 18px rgba(80, 255, 80, 0.6);
     transition: all 0.2s ease;
 }
 form > input[type="email"]:invalid:not(:focus):not(:placeholder-shown){
     padding-left: 12px;
-    box-shadow: inset 0px 0px 24px rgba(202, 36, 14, 0.7);
+    box-shadow: inset 0px 0px 24px rgba(255, 100, 80, 0.7);
     transition: all 0.2s ease;
 }
 /* Password */
 form > input[type="password"][minlength="6"]:valid {
     padding-left: 20px;
-    box-shadow: inset 0px 0px 18px rgba(14, 202, 23, 0.6);
+    box-shadow: inset 0px 0px 18px rgba(80, 255, 80, 0.6);
     transition: all 0.2s ease;
 }
 
 form > input[type="password"][minlength="6"]:invalid:not(:focus):not(:placeholder-shown){
     padding-left: 12px;
-    box-shadow: inset 0px 0px 18px rgba(202, 36, 14, 0.7);
+    box-shadow: inset 0px 0px 18px rgba(255, 100, 80, 0.7);
     transition: all 0.2s ease;
 }
 /* Form Input END*/
@@ -166,11 +168,20 @@ form > input[type="password"][minlength="6"]:invalid:not(:focus):not(:placeholde
     flex-grow: 5;
 }
 button{
+color: rgb(197 112 93);
+background-color: rgb(208 184 168);
     height: 100%;
-    width: 45%;
+    width: 40%;
     font-weight: 900;
     font-size: 24px;
     border-radius: 20px;
+transition: all .5s ease;
+}
+button:hover{
+transition: all .25s ease;
+width: 50%;
+height: 110%;
+box-shadow: 0px 0px 15px rgba(0, 0, 0, .6);
 }
 
 

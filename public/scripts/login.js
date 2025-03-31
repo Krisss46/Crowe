@@ -91,12 +91,10 @@ function resize(event){
 
     // below "(viewportX * value)" is offset correction as padding will offset cursor from resizer during usage
     feedSide.style.width = mouseX - (viewportX * 0.06) + "px"
-    loginSide.style.width = viewportX - mouseX - (viewportX * 0.04)  + "px"
-
-    
+    loginSide.style.width = viewportX - mouseX - (viewportX * 0.04) + "px"
 }
 
-//////////////////////////////////////////////
+/////////////////////////////////////////////
 
 /* Notes
 

@@ -15,6 +15,9 @@
 
     <body>
         <div id="container">
+            <video autoplay loop muted>
+                <source src="../media/loginsBG.mp4" type="video/mp4">
+            </video>
             <section id="section-navigation">
                 <div id="profile-card">
                     <img id="profile-card-pfp" src="#" alt="pfp">
@@ -27,36 +30,38 @@
                     </div>
                 </div>
                 <div id="navbar">
-                    <a href="home.html">Home</a>
+                    <a href="#">Home</a>
                     <a href="profile.html">Profile</a>
                     <a href="settings.html">Settings</a>
                     <a href="analytics.html">Analytics</a>
-                    <a href="#" id="nav-to-admin">Administration</a>
+                    <a href="administration.html" id="nav-to-admin">Administration</a>
 
 					<hr><div id="navBar-bookmarks">Bookmarks are unavailable at the moment</div>
                 </div>
             </section>
-            <div class="resizer"></div>
+            <div id="resizer1"></div>
 
             <section id="section-main">
                 <div id="main-newsbar">
-
+                    <p>You are all caught up</p>
                 </div>
                 <div id="main-content-container">
-
+                    <p>No available content</p>
                 </div>
                 <input id="main-search-bar" placeholder="Search /Category Title">
 
                 </input>
             </section>
-            <div class="resizer"></div>
+            <div id="resizer2"></div>
 
             <section id="section-chat">
                 <div id="chat-contact-list">
-
+					<p>Contacts</p>
+					<hr>
                 </div>
                 <div id="chat-DMs">
-
+					<p>Chat history</p>
+					<hr>
                 </div>
             </section>
         </div>

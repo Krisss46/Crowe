@@ -1,0 +1,75 @@
+// Imports
+@use 'commons' as *
+    
+// Container
+body, html
+    @include canvas
+#container
+    @include container
+#section-navigation
+    background-color: rgba(248, 237, 227, 0.4)
+    flex: 1 1
+    padding: 10px 10px 0 0
+#section-main
+    background-color: rgba(248, 237, 227, 0.4)
+    flex: 2 2
+    padding: 10px
+#section-chat
+    background-color: rgba(248, 237, 227, 0.4)
+    flex: 1 1
+    padding: 10px 0 0 10px
+section
+    flex-direction: column
+    gap: 10px
+    display: flex
+.resizer
+    background-color: brown
+    width: 5px
+
+// Navigation Section
+#profile-card
+    background-color: blue
+    height: 200px
+    padding: 14px
+    box-sizing: border-box
+    display: flex
+    gap: 10px
+    border-radius: 0 12px 0 0
+#profile-card-pfp
+    flex: 1
+    aspect-ratio: 1 / 1
+    background-color: aliceblue
+    text-align: center
+    border-radius: 12px
+#profile-card-info
+    flex: auto
+    font-weight: 900
+    font-size: 18px
+hr, p
+    margin: 2px
+#navbar
+    @include navBar
+
+// Main Section
+#main-newsbar
+    display: flex
+    gap: 2px
+    padding: 3px
+    border: 6px inset black
+    box-sizing: border-box
+    width: 100%
+    flex: 2 0 auto
+#main-content-container
+    @include feed
+#main-search-bar
+    @include searchBar
+
+// Chat Section
+#chat-contact-list
+    background-color: aqua
+    width: 100%
+    height: 100px
+#chat-DMs
+    background-color: cadetblue
+    width: 100%
+    height: 300px

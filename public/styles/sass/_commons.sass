@@ -1,0 +1,54 @@
+// Color Pellete
+
+// Recyclables
+@mixin canvas()
+    margin: 0
+    height: 100%
+    width: 100%
+@mixin container()
+    display: flex
+    height: 100%
+    width: 100%
+@mixin navBar()
+    width: 100%
+    background-color: blue
+    display: flex
+    flex-direction: column
+    gap: 4px
+    padding: 10px
+    box-sizing: border-box
+    border-radius: 0 0 5px 0
+    a
+        border: 2px solid black
+        border-radius: 12px
+        padding-left: 4%
+        background-color: aqua
+        text-decoration: none
+        color: black
+        font-weight: 600
+        margin-right: 30%
+@mixin feed()
+    display: flex
+    flex: 14 0 auto
+    background-color: rgb(223 211 195)
+    border-radius: 40px
+    justify-content: center
+    align-items: center
+    font-size: 40px
+    font-weight: 900
+@mixin searchBar()
+    box-sizing: border-box
+    flex: 1 0 auto
+    border-radius: 30px
+    font-size: larger
+    font-weight: 900
+    width: 100%
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.8)
+    transition: all 0.2s ease
+    &:focus
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5)
+        padding-left: 12px
+        transition: all 0.2s ease
+    &:hover
+        padding-left: 12px
+        transition: all 0.2s ease

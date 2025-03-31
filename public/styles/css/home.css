@@ -1,0 +1,144 @@
+body, html {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+#section-navigation {
+  background-color: rgba(248, 237, 227, 0.4);
+  flex: 1 1;
+  padding: 10px 10px 0 0;
+}
+
+#section-main {
+  background-color: rgba(248, 237, 227, 0.4);
+  flex: 2 2;
+  padding: 10px;
+}
+
+#section-chat {
+  background-color: rgba(248, 237, 227, 0.4);
+  flex: 1 1;
+  padding: 10px 0 0 10px;
+}
+
+section {
+  flex-direction: column;
+  gap: 10px;
+  display: flex;
+}
+
+.resizer {
+  background-color: brown;
+  width: 5px;
+}
+
+#profile-card {
+  background-color: blue;
+  height: 200px;
+  padding: 14px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 10px;
+  border-radius: 0 12px 0 0;
+}
+
+#profile-card-pfp {
+  flex: 1;
+  aspect-ratio: 1/1;
+  background-color: aliceblue;
+  text-align: center;
+  border-radius: 12px;
+}
+
+#profile-card-info {
+  flex: auto;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+hr, p {
+  margin: 2px;
+}
+
+#navbar {
+  width: 100%;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 0 0 5px 0;
+}
+#navbar a {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding-left: 4%;
+  background-color: aqua;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  margin-right: 30%;
+}
+
+#main-newsbar {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  border: 6px inset black;
+  box-sizing: border-box;
+  width: 100%;
+  flex: 2 0 auto;
+}
+
+#main-content-container {
+  display: flex;
+  flex: 14 0 auto;
+  background-color: rgb(223, 211, 195);
+  border-radius: 40px;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+#main-search-bar {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  border-radius: 30px;
+  font-size: larger;
+  font-weight: 900;
+  width: 100%;
+  box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease;
+}
+#main-search-bar:focus {
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding-left: 12px;
+  transition: all 0.2s ease;
+}
+#main-search-bar:hover {
+  padding-left: 12px;
+  transition: all 0.2s ease;
+}
+
+#chat-contact-list {
+  background-color: aqua;
+  width: 100%;
+  height: 100px;
+}
+
+#chat-DMs {
+  background-color: cadetblue;
+  width: 100%;
+  height: 300px;
+}
+
+/*# sourceMappingURL=home.css.map */

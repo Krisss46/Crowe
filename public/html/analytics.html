@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../styles/css/profile.css">
-        <script src="../scripts/profile.js" defer></script>
+        <link rel="stylesheet" href="../styles/css/analytics.css">
+        <script src="../scripts/analytics.js" defer></script>
         <script src="../scripts/commons.js" defer></script>
         <script src="/__/firebase/11.4.0/firebase-app-compat.js"></script>
         <script src="/__/firebase/11.4.0/firebase-auth-compat.js"></script>
@@ -18,30 +18,25 @@
             <video autoplay loop muted>
                 <source src="../media/loginsBG.mp4" type="video/mp4">
             </video>
-            <section id="section-navigation">
+            <sections id="section-navigation">
                 <div id="navbar">
                     <a href="home.html">Home</a>
-                    <a href="#">Profile</a>
+                    <a href="profile.html">Profile</a>
                     <a href="settings.html">Settings</a>
-                    <a href="analytics.html">Analytics</a>
+                    <a href="#">Analytics</a>
                     <a href="" onclick="alert('unavailable')" id="nav-to-admin">Administration</a>
 
 					<hr><div id="navBar-bookmarks">Bookmarks are unavailable at the moment</div>
                 </div>
-                <button id="erase-acc-btn">Delete account?</button>
-            </section>
+            </sections>
+
             <div id="resizer"></div>
-            <section id="section-profile">
-                <div id="profile-card">
-                    <p>?Username?</p>
-                    <img src="" alt="pfp">
+
+            <sections id="section-analytics">
+                <div id="analyticsPanel">
+
                 </div>
-                <div id="profile-properties">
-                    Username: <input type="text"> <button onclick="updateUsername()">save username</button><br>
-                    <input type="text"><button onclick="updateUsername()">save username</button><br>
-                    <input type="text"><button onclick="updateUsername()">save username</button><br>
-                </div>
-            </section>
+            </sections>
         </div>
     </body>
 </html>

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../styles/css/settings.css">
         <script src="../scripts/settings.js" defer></script>
+        <script src="../scripts/commons.js" defer></script>
         <script src="/__/firebase/11.4.0/firebase-app-compat.js"></script>
         <script src="/__/firebase/11.4.0/firebase-auth-compat.js"></script>
         <script src="/__/firebase/11.4.0/firebase-functions-compat.js"></script>
@@ -19,11 +20,11 @@
             </video>
             <section id="section-navigation">
                 <div id="navbar">
-                    <a href="#">Home</a>
+                    <a href="home.html">Home</a>
                     <a href="profile.html">Profile</a>
-                    <a href="settings.html">Settings</a>
+                    <a href="#">Settings</a>
                     <a href="analytics.html">Analytics</a>
-                    <a href="administration.html" id="nav-to-admin">Administration</a>
+                    <a href="" onclick="alert('unavailable')" id="nav-to-admin">Administration</a>
 
 					<hr><div id="navBar-bookmarks">Bookmarks are unavailable at the moment</div>
                 </div>
@@ -35,21 +36,17 @@
                 <div id="settings-panel">
                     <p class="heading">Themes</p><hr>
                     <form>
-                        <label>
-                          <input type="radio" name="Themes1" value="Dark"> Dark
-                        </label><br>
-                        <label>
-                          <input type="radio" name="Themes2" value="Bright"> Bright
-                        </label><br>
-                        <label>
-                          <input type="radio" name="Themes3" value="Warm"> Warm
-                        </label><br>
-                      </form><br>
+                        <input type="radio" name="Themes" value="Dark"> Dark<br>
+                        <input type="radio" name="Themes" value="Bright"> Bright<br>
+                        <input type="radio" name="Themes" value="Warm"> Warm</label><br>
+                    </form><br>
 
                     <p class="heading">Notifications</p><hr>
-                    <input type="checkbox" name="Notification1"> Mute notofication sounds<br>
-                    <input type="checkbox" name="Notification2"> Display alerts<br>
-                    <input type="checkbox" name="Notification3"> Fliter media<br>
+                    <form>
+                        <input type="checkbox" name="Notification"> Mute notofication sounds<br>
+                        <input type="checkbox" name="Notification"> Display alerts<br>
+                        <input type="checkbox" name="Notification"> Fliter media<br>
+                    </form>
                 </div>
             </section>
         </div>

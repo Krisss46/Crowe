@@ -22,20 +22,20 @@ video {
 
 #section-navigation {
   background-color: rgba(248, 237, 227, 0.4);
-  flex: 1 1;
-  padding: 10px 10px 0 0;
+  flex-grow: 1;
+  padding: 1% 1% 0 0;
 }
 
 #section-main {
   background-color: rgba(248, 237, 227, 0.4);
-  flex: 2 2;
-  padding: 10px;
+  flex-grow: 2;
+  padding: 1%;
 }
 
 #section-chat {
   background-color: rgba(248, 237, 227, 0.4);
-  flex: 1 1;
-  padding: 10px 0 0 10px;
+  flex-grow: 1;
+  padding: 1% 0 0 1%;
 }
 
 section {

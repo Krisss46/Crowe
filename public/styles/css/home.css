@@ -40,32 +40,32 @@ video {
 
 section {
   flex-direction: column;
-  gap: 10px;
+  gap: 1%;
   display: flex;
 }
 
-#resizer1, #resizer2 {
+#resizer {
   background-color: #c14600;
   opacity: 0.55;
-  width: 10px;
-  min-width: 10px;
+  width: 0.7vw;
+  min-width: 0.7vw;
   transition: all 0.15s ease;
 }
-#resizer1:hover, #resizer2:hover {
+#resizer:hover {
   opacity: 0.9;
   cursor: ew-resize;
-  width: 30px;
-  min-width: 30px;
+  width: 2vw;
+  min-width: 2vw;
   transition: all 0.2s ease;
 }
 
 #profile-card {
   background-color: #e5d0ac;
   height: 200px;
-  padding: 14px;
+  padding: 1.4%;
   box-sizing: border-box;
   display: flex;
-  gap: 10px;
+  gap: 1%;
   border-radius: 0 12px 0 0;
 }
 
@@ -84,7 +84,7 @@ section {
 }
 
 hr, p {
-  margin: 2px;
+  margin: 0.2%;
 }
 
 #navbar {
@@ -92,10 +92,10 @@ hr, p {
   background-color: #e5d0ac;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 10px;
+  gap: 0.4%;
+  padding: 1%;
   box-sizing: border-box;
-  border-radius: 0 0 5px 0;
+  border-radius: 0 0 0.5% 0;
 }
 #navbar a {
   border: 2px solid black;
@@ -130,8 +130,8 @@ hr, p {
   background-color: #e5d0ac;
   border-radius: 8px;
   display: flex;
-  gap: 2px;
-  padding: 3px;
+  gap: 0.2%;
+  padding: 3%;
   border: 5px double black;
   box-sizing: border-box;
   width: 100%;
@@ -170,11 +170,11 @@ hr, p {
 }
 #main-search-bar:focus {
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-  padding-left: 12px;
+  padding-left: 1.2%;
   transition: all 0.2s ease;
 }
 #main-search-bar:hover {
-  padding-left: 12px;
+  padding-left: 1.2%;
   transition: all 0.2s ease;
 }
 

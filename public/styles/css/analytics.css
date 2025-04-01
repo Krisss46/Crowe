@@ -39,15 +39,15 @@ video {
 #resizer {
   background-color: #c14600;
   opacity: 0.55;
-  width: 10px;
-  min-width: 10px;
+  width: 0.7vw;
+  min-width: 0.7vw;
   transition: all 0.15s ease;
 }
 #resizer:hover {
   opacity: 0.9;
   cursor: ew-resize;
-  width: 30px;
-  min-width: 30px;
+  width: 2vw;
+  min-width: 2vw;
   transition: all 0.2s ease;
 }
 
@@ -60,10 +60,10 @@ hr, p {
   background-color: #e5d0ac;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 10px;
+  gap: 0.4%;
+  padding: 1%;
   box-sizing: border-box;
-  border-radius: 0 0 5px 0;
+  border-radius: 0 0 0.5% 0;
 }
 #navbar a {
   border: 2px solid black;

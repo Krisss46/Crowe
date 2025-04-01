@@ -24,8 +24,8 @@ video {
   flex-grow: 6;
   display: flex;
   flex-direction: column;
-  padding: 30px 3% 20px 3%;
-  gap: 10px;
+  padding: 3% 3% 2% 3%;
+  gap: 1vh;
   transition: filter 0.25s ease, background-color 0.25s ease;
   background-color: rgba(254, 249, 225, 0.4);
   filter: blur(1.5px);
@@ -39,15 +39,15 @@ video {
 #resizer {
   background-color: #c14600;
   opacity: 0.55;
-  width: 10px;
-  min-width: 10px;
+  width: 0.7vw;
+  min-width: 0.7vw;
   transition: all 0.15s ease;
 }
 #resizer:hover {
   opacity: 0.9;
   cursor: ew-resize;
-  width: 30px;
-  min-width: 30px;
+  width: 2vw;
+  min-width: 2vw;
   transition: all 0.2s ease;
 }
 
@@ -56,8 +56,8 @@ video {
   grid-template-columns: 1fr minmax(0, 50vh);
   grid-template-rows: 1fr 1fr;
   flex-grow: 2;
-  padding: 20px 2% 10px 2%;
-  gap: 10px;
+  padding: 2% 2% 1% 2%;
+  gap: 1%;
   transition: filter 0.25s ease, background-color 0.25s ease;
   background-color: rgba(254, 249, 225, 0.4);
   filter: blur(1.5px);
@@ -93,11 +93,11 @@ video {
 }
 #search-bar:focus {
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-  padding-left: 12px;
+  padding-left: 1.2%;
   transition: all 0.2s ease;
 }
 #search-bar:hover {
-  padding-left: 12px;
+  padding-left: 1.2%;
   transition: all 0.2s ease;
 }
 
@@ -123,8 +123,8 @@ form {
   background-color: #e5d0ac;
   border-radius: 30px;
   align-items: center;
-  padding: 20px 0 10px 0;
-  gap: 7px;
+  padding: 2% 0 1% 0;
+  gap: 0.7%;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4);
   opacity: 0.96;
 }
@@ -141,28 +141,28 @@ input {
 }
 
 form > input:hover, form > input:focus {
-  padding-left: 12px;
+  padding-left: 1.2%;
   box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease;
 }
 
 form > input[type=email]:valid {
-  padding-left: 20px;
+  padding-left: 2%;
   box-shadow: inset 0px 0px 18px rgba(80, 255, 80, 0.6);
   transition: all 0.2s ease;
 }
 form > input[type=email]:invalid:not(:focus):not(:placeholder-shown) {
-  padding-left: 12px;
+  padding-left: 1.2%;
   box-shadow: inset 0px 0px 24px rgba(255, 100, 80, 0.7);
   transition: all 0.2s ease;
 }
 form > input[type=password][minlength="6"]:valid {
-  padding-left: 20px;
+  padding-left: 2%;
   box-shadow: inset 0px 0px 18px rgba(80, 255, 80, 0.6);
   transition: all 0.2s ease;
 }
 form > input[type=password][minlength="6"]:invalid:not(:focus):not(:placeholder-shown) {
-  padding-left: 12px;
+  padding-left: 1.2%;
   box-shadow: inset 0px 0px 18px rgba(255, 100, 80, 0.7);
   transition: all 0.2s ease;
 }

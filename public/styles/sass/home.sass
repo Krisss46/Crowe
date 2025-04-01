@@ -29,29 +29,19 @@ video
     padding: 1% 0 0 1%
 section
     flex-direction: column
-    gap: 10px
+    gap: 1%
     display: flex
-#resizer1, #resizer2
-    background-color: $style-color
-    opacity: 0.55
-    width: 10px
-    min-width: 10px
-    transition: all 0.15s ease
-    &:hover
-        opacity: .9
-        cursor: ew-resize
-        width: 30px
-        min-width: 30px
-        transition: all 0.2s ease
+#resizer
+    @include resizer
 
 // Navigation Section
 #profile-card
     background-color: $primary-color
     height: 200px
-    padding: 14px
+    padding: 1.4%
     box-sizing: border-box
     display: flex
-    gap: 10px
+    gap: 1%
     border-radius: 0 12px 0 0
 #profile-card-pfp
     flex: 1
@@ -65,7 +55,7 @@ section
     font-size: 18px
 
 hr, p
-    margin: 2px
+    margin: .2%
 #navbar
     @include navBar
 
@@ -74,8 +64,8 @@ hr, p
     background-color: $primary-color
     border-radius: 8px
     display: flex
-    gap: 2px
-    padding: 3px
+    gap: .2%
+    padding: 3%
     border: 5px double black
     box-sizing: border-box
     width: 100%

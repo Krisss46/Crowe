@@ -28,17 +28,7 @@ video
     gap: 5px
     padding: 10px 0 0 10px
 #resizer
-    background-color: $style-color
-    opacity: 0.55
-    width: 10px
-    min-width: 10px
-    transition: all 0.15s ease
-    &:hover
-        opacity: .9
-        cursor: ew-resize
-        width: 30px
-        min-width: 30px
-        transition: all 0.2s ease
+    @include resizer
 
 // navigation section
 #navbar

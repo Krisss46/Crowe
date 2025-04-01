@@ -24,10 +24,10 @@ $style-color: #c14600 // misc styles reserved for special cases, ex resizer
     background-color: $primary-color
     display: flex
     flex-direction: column
-    gap: 4px
-    padding: 10px
+    gap: .4%
+    padding: 1%
     box-sizing: border-box
-    border-radius: 0 0 5px 0
+    border-radius: 0 0 .5% 0
     a
         border: 2px solid black
         border-radius: 12px
@@ -74,8 +74,20 @@ $style-color: #c14600 // misc styles reserved for special cases, ex resizer
     transition: all 0.2s ease
     &:focus
         box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5)
-        padding-left: 12px
+        padding-left: 1.2%
         transition: all 0.2s ease
     &:hover
-        padding-left: 12px
+        padding-left: 1.2%
+        transition: all 0.2s ease
+@mixin resizer
+    background-color: $style-color
+    opacity: 0.55
+    width: .7vw
+    min-width: .7vw
+    transition: all 0.15s ease
+    &:hover
+        opacity: .9
+        cursor: ew-resize
+        width: 2vw
+        min-width: 2vw
         transition: all 0.2s ease

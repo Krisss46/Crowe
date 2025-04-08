@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../styles/css/profile.css">
+        <link rel="icon" type="image/x-icon" href="../media/icon.png">
         <script src="../scripts/profile.js" defer></script>
         <script src="../scripts/commons.js" defer></script>
         <script src="/__/firebase/11.4.0/firebase-app-compat.js"></script>
@@ -37,6 +38,10 @@
                     <img src="" alt="pfp">
                 </div>
                 <div id="profile-properties">
+                    Username: <input type="text"> <button onclick="updateUsername()">Save Username</button><br>
+                    Email: <input type="email"> <button onclick="updateEmail()">Save Email</button><br>
+                    Password: <input type="password"> <button onclick="updatePassword()">Save Password</button><br>
+                    Profile Picture: <input type="file" accept="image/*"> <button onclick="updateProfilePicture()">Upload Picture</button><br>
                     Username: <input type="text"> <button onclick="updateUsername()">Save Username</button><br>
                     Email: <input type="email"> <button onclick="updateEmail()">Save Email</button><br>
                     Password: <input type="password"> <button onclick="updatePassword()">Save Password</button><br>
